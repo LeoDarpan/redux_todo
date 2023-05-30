@@ -12,11 +12,6 @@ const Header = () => {
           Tasks
         </span> 
       </div>
-      <div className='parent'>
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum modi obcaecati quod harum quo ullam illum animi similique hic velit ratione assumenda voluptatem vero fugiat eaque ipsa nam, iure tempora!
-        </span>
-      </div>
     </header>
   )
 }
