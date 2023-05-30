@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  font-family: $font-primary;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  // color: $blue-primary;
+  text-decoration: none;
+  transition: all 0.25s ease;
+
+  &:hover {
+    // color: $blue-secondary;
+    transition: all 0.25s ease;
+  }
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.max-sized {
+  width: 100%;
+  // max-width: 1280px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: $screen-lg) {
+    max-width: 100%;
+  }
+}
+
+b, strong {
+  font-weight: bold;
+}
