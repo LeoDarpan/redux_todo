@@ -1,0 +1,11 @@
+.todo {
+  @include flex(space-between);
+  padding: 20px 0;
+  &__actions {
+    @include flex;
+    svg {
+      height: 22px;
+      border: 1px solid blue;
+    }
+  }
+}

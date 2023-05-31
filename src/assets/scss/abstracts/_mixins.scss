@@ -208,3 +208,11 @@ $browser-context: 16;
   -o-transition-delay: $delay;
   transition-delay: $delay;
 }
+//Mixin for using Flex
+@mixin flex($justification: center, $alignment: center, $direction: row) {
+  display: flex;
+  justify-content: $justification;
+  align-items: $alignment;
+  flex-direction: $direction;
+}
+

@@ -1,9 +1,24 @@
-.parent {
-  border: 1px solid blue;
-  max-width: 600px;
-  overflow-x: scroll;
-  span {
-    display: flex;
-    white-space: nowrap;
+header {
+  @include flex(space-between);
+  border-bottom: 1px solid $header-border-bottom;
+  padding: 0 20px;
+  
+  .logo {
+    @include flex;
+    width: fit-content;
+    &__image {
+      margin-right: 10px;
+      svg {
+        fill: $logo-icon;
+      }
+    }
+  }
+  .actions {
+    @include flex;
+    &__login {
+      svg {
+        fill: $login-icon;
+      }
+    }
   }
 }

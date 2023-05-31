@@ -14,6 +14,10 @@
 @import "layout/footer";
 
 // 4. Components
-@import "components/app";
+@import "components/todo";
 
 // 5. Page wise adjustments
+@import "pages/app";
+
+//6. Containers for components
+@import "containers/todos";
