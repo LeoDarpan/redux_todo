@@ -5,10 +5,10 @@ import { Todos } from './containers';
 function App() {
 
   return (
-    <>
+    <div className='container'>
       <Header />
       <Todos />
-    </>
+    </div>
   )
 }
 

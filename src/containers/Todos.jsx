@@ -3,9 +3,9 @@ import { Todo } from '../components';
 
 const Todos = () => {
   return (
-    <div className="todo-container">
+    <section className="todo-container">
       <Todo />
-    </div>
+    </section>
   )
 }
 
