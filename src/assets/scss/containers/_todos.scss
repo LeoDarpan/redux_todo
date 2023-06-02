@@ -1,3 +1,7 @@
 .todo-container {
-  padding: 0 20px;
+  border: 1px solid $theme-green;
+  border-radius: 8px;
+  margin: 10px auto;
+  max-width: 800px;
+  padding: 10px;
 }
