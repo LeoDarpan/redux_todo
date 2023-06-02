@@ -41,8 +41,8 @@
         transform: translateX(-90%);
       }
     }
-    svg {
-      height: 24px;
+    span {
+      pointer-events: none;
     }
   }
 }
