@@ -21,9 +21,9 @@ const Todo = () => {
       </div>
       <div className="todo__actions">
         <span className='active-indicator'></span>
-        <IconButton iconCode='&#xe876;' className='finished active' handler={changeState}/>
+        <IconButton iconCode='&#xe876;' className='finished' handler={changeState}/>
         <IconButton iconCode='&#xf726;' className='in-progress' handler={changeState}/>
-        <IconButton iconCode='&#xef64;' className='pending' handler={changeState}/>
+        <IconButton iconCode='&#xef64;' className='pending active' handler={changeState}/>
       </div>
     </div>
   )

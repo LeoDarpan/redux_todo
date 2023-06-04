@@ -4,21 +4,22 @@
   border-bottom: 1px solid $theme-green;
   &__actions {
     @include flex(space-around);
-    background-color: rgb(156, 162, 159);
+    background-color: $actions-background;
     border-radius: 8px;
     height: 30px;
     padding: 0 10px;
     position: relative;
-    width: fit-content;
+    transition: .3s all ease-in-out;
+    width: 112px;
     .active-indicator {
       background-color: $theme-green;
       border-radius: 50%;
-      outline: 5px solid rgb(51, 50, 50);
+      outline: 5px solid $active-indicator-outline;
       display: flex;
       height: 24px;
       position: absolute;
       top: -35%;
-      left: 10px;
+      left: 78px;
       transition: .3s all ease-in-out;
       width: 24px;
       z-index: 1;
@@ -36,7 +37,7 @@
       &.active {
         transform: translateY(-45%);
         span {
-          color: black;
+          color: $black;
         }
       }
     }
