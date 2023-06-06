@@ -1,19 +1,5 @@
 {
   "tasks": [
-    {
-      "id": 1,
-      "task": "Read 10 pages",
-      "status": "Pending"
-    },
-    {
-      "id": 2,
-      "task": "Make a draft to send to",
-      "status": "Pending"
-    },
-    {
-      "status": "In Progress",
-      "id": 3,
-      "task": "Mark sheets"
-    }
+    
   ]
 }

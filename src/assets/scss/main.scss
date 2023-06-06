@@ -7,7 +7,7 @@
 
 // 2. Base
 @import "base/reset", "base/base", "base/fonts", "base/typography",
-  "base/helpers";
+  "base/helpers", "base/animation";
 
 // 3. Layout-related sections
 @import "layout/header";
@@ -15,9 +15,10 @@
 
 // 4. Components
 @import "components/todo";
+@import "components/empty";
 
 // 5. Page wise adjustments
-@import "pages/app";
+@import "pages/root";
 
 //6. Containers for components
 @import "containers/todos";
