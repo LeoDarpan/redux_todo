@@ -2,6 +2,15 @@
   @include flex(space-between);
   padding: 20px 0;
   border-bottom: 1px solid $theme-green;
+  font-size: 24px;
+  font-style: italic;
+  position: relative;
+  &__text {
+    min-width: 120px;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   &__actions {
     @include flex(space-around);
     background-color: $actions-background;
@@ -10,7 +19,7 @@
     padding: 0 10px;
     position: relative;
     transition: .3s all ease-in-out;
-    width: 112px;
+    width: 146px;
     .active-indicator {
       background-color: $theme-green;
       border-radius: 50%;
@@ -40,10 +49,16 @@
           color: $black;
         }
       }
+      &.delete {
+        span {
+          color: rgb(187, 2, 2);
+        }
+      }
     }
     span {
       pointer-events: none;
       transition: .3s all ease-in-out;
     }
   }
+  
 }

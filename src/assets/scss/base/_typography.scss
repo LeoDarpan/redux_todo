@@ -1,5 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: $fw-bold;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 h1 {
@@ -34,7 +35,8 @@ h4 {
   font-size: 18px;
 }
 
-p, li {
+p, li, span {
+  font-family: 'Rajdhani', sans-serif;
   font-size: 20px;
   line-height: 26px;
 

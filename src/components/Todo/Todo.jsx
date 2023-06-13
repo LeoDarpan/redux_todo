@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { useDispatch } from 'react-redux';
 import { IconButton } from '../subcomponents';
+import { changeStatus, deleteTodos } from '../../actions/todos';
 
-const Todo = (props) => {
-  const {task, status} = props.todo;
+const Todo = memo((props) => {
+  const dispatch = useDispatch();
+  const {task, status, id} = props.todo;
   const active = status.toLowerCase().split(' ').join('-');
   
-  const changeState = (e) => {
+  const handleChange = (e) => {
     let parent = e.target.parentNode;
     let buttons = parent.querySelectorAll('.icon-button');
     let indicator = parent.querySelector('.active-indicator');
+    let id = e.target.parentNode.parentNode.id;
+    let newStatus = {"status": e.target.getAttribute('status')};
+    
+    dispatch(changeStatus(id, newStatus));
     
     buttons.forEach((button, i) => {
       button.classList.remove('active');
@@ -18,20 +25,26 @@ const Todo = (props) => {
       }
     });
   };
+
+  const handleDelete = async (e) => {
+    let status = e.target.getAttribute('status');
+    dispatch(deleteTodos(id));
+  }
   
   return (
-    <div className="todo">
+    <div className="todo" key={id} id={id}>
       <div className="todo__text">
-        {task}
+        <span>{task}</span>
       </div>
       <div className="todo__actions">
         <span className='active-indicator'></span>
-        <IconButton iconCode='&#xe876;' className='finished' active={active} handler={changeState}/>
-        <IconButton iconCode='&#xf726;' className='in-progress' active={active} handler={changeState}/>
-        <IconButton iconCode='&#xef64;' className='pending' active={active} handler={changeState}/>
+        <IconButton iconCode='&#xe876;' className='finished' active={active} handler={handleChange} status='finished'/>
+        <IconButton iconCode='&#xf726;' className='in-progress' active={active} handler={handleChange} status='in-progress'/>
+        <IconButton iconCode='&#xef64;' className='pending' active={active} handler={handleChange} status='pending'/>
+        <IconButton iconCode='&#xe5c9;' className='delete' handler={handleDelete} />
       </div>
     </div>
   )
-}
+});
 
 export default Todo;

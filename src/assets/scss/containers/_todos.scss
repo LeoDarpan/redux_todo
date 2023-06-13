@@ -1,6 +1,20 @@
 .todo-container {
   border-radius: 8px;
   margin: 10px auto;
-  max-width: 800px;
-  width: 90%;
+  width: 95%;
+  min-height: calc(100vh - 300px);
+  @include flex;
+
+  .tasks-group {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+    h4 {
+      color: $theme-green;
+      font-size: 20px;
+      font-style: italic;
+      text-decoration: underline dashed;
+      text-underline-offset: 5px;
+    }
+  }
 }

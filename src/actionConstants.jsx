@@ -1,5 +1,9 @@
 export const FETCH_TODOS = 'getTodos';
+export const WRITE_TODOS = 'writeTodos';
 export const ADD_TODO = 'addTodo';
 export const DELETE_TODO = 'deleteTodo';
 export const CHANGE_STATUS = 'changeStatus';
 export const ALL_FINISHED = 'allFinished';
+export const TEST = 'testing';
+export const START_LOADING = 'startLoading';
+export const END_LOADING = 'endLoading';

@@ -1,0 +1,34 @@
+.loader {
+  @include flex;
+  width: 80px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  transform: rotate(45deg);
+  &__span {
+    border-radius: 50%;
+    padding: 15px;
+    display: inline-flex;
+    position: relative;
+    transition: all ease .3s;
+    &:first-child {
+      background-color: red;
+      top: -25px;
+      left: -25px;
+    }
+    &:nth-child(2) {
+      background-color: yellow;
+      top: -25px;
+      right: -25px;
+    }
+    &:nth-child(3) {
+      background-color: green;
+      bottom: -25px;
+      left: -25px;
+    }
+    &:last-child {
+      background-color: blue;
+      bottom: -25px;
+      right: -25px;
+    }
+  }
+}

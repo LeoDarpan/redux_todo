@@ -31,8 +31,7 @@ a {
 .container,
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 10px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -49,7 +48,7 @@ a {
 
 .max-sized {
   width: 100%;
-  // max-width: 1280px;
+  max-width: 800px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;

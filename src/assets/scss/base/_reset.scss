@@ -2,9 +2,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  color: $white;
   margin: 0;
   padding: 0;
-  color: $white;
 }
 
 html,
@@ -152,7 +152,8 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-button {
+button,
+input {
   background-color: transparent;
   border: 0;
   cursor: pointer;

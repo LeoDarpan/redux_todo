@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Header = () => {
   const [username, setUsername] = useState('');
@@ -12,7 +12,7 @@ const Header = () => {
           </svg>
         </div>
         <div className='logo__text'>
-          Tasks
+          <h1>Tasks</h1>
         </div> 
       </div>
       <div className="actions">

@@ -1,35 +1,47 @@
-import {FETCH_TODO, ADD_TODO, DELETE_TODO, ALL_FINISHED, CHANGE_STATUS} from '../../actionConstants';
+import { FETCH_TODOS, ADD_TODO, DELETE_TODO, ALL_FINISHED, CHANGE_STATUS, TEST, START_LOADING, END_LOADING } from '../../actionConstants';
 
-const initialState = [];
-
-const addID = () => {
-  const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);
-  return maxId + 1;
-}
+const initialState = {todos: [], isLoading: true};
 
 const appReducer = (state = initialState, action) => {
+  let newTodos = [];
   switch(action.type) {
-    case FETCH_TODO: 
-      return [...state, action.payload];
+    case START_LOADING: 
+      state = {...state, isLoading: true};
+      return state;
+    
+    case END_LOADING:
+      state = {...state, isLoading: false};
+      return state;
+    
+    case FETCH_TODOS:
+      state = {...state, todos: action.payload};
+      return state;
       
     case ADD_TODO: 
-      let id = addID;
-      let newTodo = {id, ...action.payload};
-      return [newTodo, ...state];
+      newTodos = [...state.todos, action.payload]
+      state = {...state, todos: newTodos};
+      return state;
     
     case DELETE_TODO:
-      return state.filter(todo.id !== action.payload);
+      newTodos = state.todos.filter(todo => todo.id !== action.payload);
+      state = {...state, todos: newTodos};
+      return state;
   
     case CHANGE_STATUS:
-      return state.map(todo => {
-        if(todo.id === action.payload.id)
-          todo.status = action.payload.status;
+      newTodos = state.todos.map(todo => {
+        if(todo.id == action.payload.id) {
+          todo.status = action.payload.status.status;
+        }
         return todo;
       });
+      state = {...state, todos: newTodos};
+      return state;
     
     case ALL_FINISHED:
-      return state.map(todo => ({...todo, status: "finished"}));
+      state.todos = state.todos.map(todo => ({...todo, status: "finished"}));
+      return state;
     
+    case TEST:
     default: 
       return state;
   }
