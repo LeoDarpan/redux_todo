@@ -15,8 +15,6 @@ const Todo = memo((props) => {
     let id = e.target.parentNode.parentNode.id;
     let newStatus = {"status": e.target.getAttribute('status')};
     
-    dispatch(changeStatus(id, newStatus));
-    
     buttons.forEach((button, i) => {
       button.classList.remove('active');
       if(button == e.target) {
@@ -24,15 +22,17 @@ const Todo = memo((props) => {
         indicator.style.left = 10 + 24*i + 10*i + 'px';
       }
     });
+
+    dispatch(changeStatus(id, newStatus));
+    
   };
 
   const handleDelete = async (e) => {
-    let status = e.target.getAttribute('status');
     dispatch(deleteTodos(id));
   }
   
   return (
-    <div className="todo" key={id} id={id}>
+    <div className="todo" id={id}>
       <div className="todo__text">
         <span>{task}</span>
       </div>

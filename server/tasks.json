@@ -6,19 +6,14 @@
       "status": "finished"
     },
     {
-      "id": "945ee15f-5d8d-418d-a45c-3a5d0d44c079",
-      "task": "a",
-      "status": "pending"
-    },
-    {
       "id": "790d3505-0a98-4153-a2ae-4f24621e3fb7",
       "task": "b",
       "status": "finished"
     },
     {
-      "id": "aa732971-c10b-42fc-9c85-f30f10b14903",
-      "task": "hc",
-      "status": "in-progress"
+      "id": "542fa580-9a7f-43a2-98f3-7caea1298c3e",
+      "task": "Gain knowledge for Redux-toolkit",
+      "status": "finished"
     }
   ]
 }

@@ -13,9 +13,9 @@ const Form = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(todo != '') {
+    if(todo.trim() != '') {
       let id = uuidv4();
-      let newTodo = {"id": id, "task": todo, "status": 'pending'};
+      let newTodo = {"id": id, "task": todo.trim(), "status": 'pending'};
       dispatch(writeTodos(newTodo));
       setShowError(false);
       setTodo("");
