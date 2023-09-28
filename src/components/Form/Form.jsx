@@ -39,7 +39,7 @@ const Form = () => {
             onBlur={() => setShowCursor(true)}
             className='add-todo__input'
           />
-          <IconButton iconCode="&#xe145;" className={todo ? 'show add-todo__icon' : 'hide add-todo__icon'}/>
+          <IconButton iconCode="&#xe145;" className={todo ? 'show add-todo__icon' : 'hide add-todo__icon'} handler={handleSubmit}/>
         </form>
         <p className={showError ? 'add-todo__error show' : 'add-todo__error hide'}>Add a todo first!</p>
       </div>

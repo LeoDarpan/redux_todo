@@ -1,19 +1,14 @@
 {
   "tasks": [
     {
-      "id": "52038fcc-31c6-4dd1-bced-078e0f300d71",
-      "task": "Hi there",
-      "status": "finished"
+      "id": "c917fad9-9b3d-4850-a9ab-e14b6f854209",
+      "task": "fhdy",
+      "status": "in-progress"
     },
     {
-      "id": "790d3505-0a98-4153-a2ae-4f24621e3fb7",
-      "task": "b",
-      "status": "finished"
-    },
-    {
-      "id": "542fa580-9a7f-43a2-98f3-7caea1298c3e",
-      "task": "Gain knowledge for Redux-toolkit",
-      "status": "finished"
+      "id": "cbd1c398-6390-4b81-982d-fd1dc9a53973",
+      "task": "dfdfdf",
+      "status": "pending"
     }
   ]
 }
